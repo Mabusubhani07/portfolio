@@ -71,10 +71,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F4F1EA" },
-    { media: "(prefers-color-scheme: dark)", color: "#121314" },
-  ],
+  themeColor: "#F4F1EA",
   width: "device-width",
   initialScale: 1,
 };
@@ -90,7 +87,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${instrumentSerif.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col relative selection:bg-[#1E3A2F] selection:text-[#F4F1EA] dark:selection:bg-[#44725E] dark:selection:text-[#121314]">
+      <body className="min-h-full flex flex-col relative selection:bg-[#1E3A2F] selection:text-[#F4F1EA]">
         <ThemeProvider>
           <SmoothScrollProvider>
             <CustomCursor />

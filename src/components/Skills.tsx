@@ -79,15 +79,17 @@ export function Skills() {
     if (prefersReducedMotion) return;
 
     const ctx = gsap.context(() => {
+      // Animate subtle Y lift only; never animate opacity so cards are always 100% visible and crisp
       gsap.from(".skill-card", {
-        y: 35,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.1,
-        ease: "power3.out",
+        y: 20,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: "power2.out",
+        clearProps: "all",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 75%",
+          start: "top 85%",
+          once: true,
         },
       });
     }, containerRef);
@@ -103,33 +105,33 @@ export function Skills() {
     >
       {/* Section Header */}
       <div className="px-6 md:px-12 flex items-center justify-between pb-8 hairline-b">
-        <span className="mono-tag text-neutral-500 dark:text-neutral-400">
+        <span className="mono-tag text-neutral-500">
           03 / Skills & Capabilities
         </span>
-        <span className="mono-tag text-neutral-400 dark:text-neutral-600">
+        <span className="mono-tag text-neutral-400">
           Core Tooling & Knowledge
         </span>
       </div>
 
       <div className="px-6 md:px-12 pt-12 pb-14 space-y-4 max-w-3xl">
-        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-[#EAE7E0] font-normal leading-[1.05]">
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 font-normal leading-[1.05]">
           A toolkit centered on fundamentals and durability.
         </h2>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+        <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
           Grouped by engineering discipline. No synthetic rating bars or artificial percentages—only concrete proficiencies deployed across academic coursework and active projects.
         </p>
       </div>
 
       {/* Slow Infinite Marquee */}
-      <div className="py-6 my-4 overflow-hidden select-none hairline-t hairline-b bg-neutral-100/40 dark:bg-neutral-900/40">
+      <div className="py-6 my-4 overflow-hidden select-none hairline-t hairline-b bg-neutral-100/50">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...marqueeItems, ...marqueeItems].map((item, idx) => (
             <span
               key={idx}
-              className="inline-flex items-center text-xs sm:text-sm font-mono tracking-[0.25em] uppercase text-neutral-700 dark:text-neutral-300 mx-6"
+              className="inline-flex items-center text-xs sm:text-sm font-mono tracking-[0.25em] uppercase text-neutral-700 mx-6"
             >
               <span>{item}</span>
-              <span className="ml-12 w-1.5 h-1.5 rounded-full bg-[#1E3A2F] dark:bg-[#44725E] opacity-60" />
+              <span className="ml-12 w-1.5 h-1.5 rounded-full bg-[#1E3A2F] opacity-60" />
             </span>
           ))}
         </div>
@@ -140,24 +142,24 @@ export function Skills() {
         {skillGroups.map((group, idx) => (
           <div
             key={group.category}
-            className={`skill-card border border-neutral-300 dark:border-neutral-800 rounded-sm p-6 sm:p-8 bg-neutral-50/50 dark:bg-neutral-900/20 transition-all duration-300 hover:border-neutral-500 dark:hover:border-neutral-700 ${
-              idx % 2 === 1 ? "md:translate-y-4" : ""
+            className={`skill-card border border-neutral-300 rounded-sm p-6 sm:p-8 bg-neutral-50/70 transition-colors duration-200 hover:border-neutral-700 ${
+              idx % 2 === 1 ? "md:mt-4" : ""
             }`}
           >
             <div className="flex items-center justify-between pb-4 hairline-b">
-              <span className="font-mono text-xs text-neutral-400 dark:text-neutral-500">
+              <span className="font-mono text-xs text-neutral-400">
                 {group.number}
               </span>
-              <span className="mono-tag text-[#1E3A2F] dark:text-[#44725E]">
+              <span className="mono-tag text-[#1E3A2F]">
                 Discipline
               </span>
             </div>
 
-            <h3 className="font-display text-2xl sm:text-3xl text-neutral-950 dark:text-neutral-100 font-normal pt-4">
+            <h3 className="font-display text-2xl sm:text-3xl text-neutral-950 font-normal pt-4">
               {group.category}
             </h3>
 
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 font-mono mt-1 mb-6">
+            <p className="text-xs text-neutral-500 font-mono mt-1 mb-6">
               {group.summary}
             </p>
 
@@ -166,7 +168,7 @@ export function Skills() {
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs font-mono tracking-wide px-3 py-1.5 rounded-sm bg-neutral-200/60 dark:bg-neutral-800/80 text-neutral-800 dark:text-neutral-200 border border-neutral-300/50 dark:border-neutral-700/50 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors"
+                  className="text-xs font-mono tracking-wide px-3 py-1.5 rounded-sm bg-neutral-200/70 text-neutral-800 border border-neutral-300/60 hover:border-neutral-500 transition-colors"
                 >
                   {skill}
                 </span>

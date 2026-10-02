@@ -119,19 +119,19 @@ export function Education() {
     >
       {/* Section Header */}
       <div className="flex items-center justify-between pb-8 hairline-b">
-        <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          06 / Education & Academics
+        <span className="mono-tag text-neutral-500">
+          04 / Education & Academics
         </span>
-        <span className="mono-tag text-neutral-400 dark:text-neutral-600">
+        <span className="mono-tag text-neutral-400">
           Institutional Path
         </span>
       </div>
 
       <div className="pt-12 pb-14 space-y-4 max-w-3xl">
-        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-[#EAE7E0] font-normal leading-[1.05]">
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 font-normal leading-[1.05]">
           Academic trajectory grounded in core principles.
         </h2>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+        <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
           Rigorous engineering training at Manipal Institute of Technology (MAHE), pairing academic theory with hands-on systems construction.
         </p>
       </div>
@@ -139,12 +139,12 @@ export function Education() {
       {/* Vertical Timeline */}
       <div className="relative pt-6 max-w-4xl mx-auto">
         {/* Background Track Line */}
-        <div className="absolute left-4 md:left-8 top-8 bottom-8 w-[1px] bg-neutral-300 dark:bg-neutral-800" />
+        <div className="absolute left-4 md:left-8 top-8 bottom-8 w-[1px] bg-neutral-300" />
 
         {/* Dynamic Drawing Fill Line */}
         <div
           ref={lineRef}
-          className="absolute left-4 md:left-8 top-8 bottom-8 w-[2px] bg-[#1E3A2F] dark:bg-[#44725E] will-change-transform"
+          className="absolute left-4 md:left-8 top-8 bottom-8 w-[2px] bg-[#1E3A2F] will-change-transform"
         />
 
         {/* Milestones */}
@@ -155,17 +155,17 @@ export function Education() {
               className="timeline-card relative pl-12 md:pl-20 group"
             >
               {/* Timeline Indicator Dot */}
-              <div className="absolute left-2.5 md:left-6.5 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#F4F1EA] dark:bg-[#121314] border-2 border-[#1E3A2F] dark:border-[#44725E] flex items-center justify-center transition-transform group-hover:scale-125">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A2F] dark:bg-[#44725E]" />
+              <div className="absolute left-2.5 md:left-6.5 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#F4F1EA] border-2 border-[#1E3A2F] flex items-center justify-center transition-transform group-hover:scale-125">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1E3A2F]" />
               </div>
 
               {/* Milestone Content Box */}
-              <div className="border border-neutral-300 dark:border-neutral-800 rounded-sm p-6 md:p-8 bg-neutral-50/50 dark:bg-neutral-900/30 transition-all duration-300 hover:border-neutral-500 dark:hover:border-neutral-700">
+              <div className="border border-neutral-300 rounded-sm p-6 md:p-8 bg-neutral-50/70 transition-all duration-300 hover:border-neutral-500">
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-4 hairline-b text-xs font-mono">
-                  <span className="text-[#1E3A2F] dark:text-[#44725E] font-medium uppercase tracking-wider">
+                  <span className="text-[#1E3A2F] font-medium uppercase tracking-wider">
                     {item.phase}
                   </span>
-                  <div className="flex items-center gap-4 text-neutral-500 dark:text-neutral-400">
+                  <div className="flex items-center gap-4 text-neutral-500">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />
                       {item.timeline}
@@ -178,15 +178,15 @@ export function Education() {
                 </div>
 
                 <div className="pt-4 space-y-2">
-                  <h3 className="font-display text-2xl sm:text-3xl text-neutral-950 dark:text-neutral-100 font-normal">
+                  <h3 className="font-display text-2xl sm:text-3xl text-neutral-950 font-normal">
                     {item.title}
                   </h3>
-                  <p className="text-sm font-medium text-neutral-800 dark:text-neutral-300 font-mono">
+                  <p className="text-sm font-medium text-neutral-800 font-mono">
                     {item.institution}
                   </p>
                 </div>
 
-                <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed pt-3">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed pt-3">
                   {item.details}
                 </p>
 
@@ -195,7 +195,7 @@ export function Education() {
                   {item.coursework.map((course) => (
                     <span
                       key={course}
-                      className="text-xs font-mono tracking-wide px-2.5 py-1 rounded bg-neutral-200/50 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300"
+                      className="text-xs font-mono tracking-wide px-2.5 py-1 rounded bg-neutral-200/60 text-neutral-700"
                     >
                       {course}
                     </span>

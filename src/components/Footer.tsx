@@ -27,11 +27,11 @@ export function Footer() {
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 hairline-b">
         {/* Left: Live Bengaluru Local Time */}
         <div className="space-y-1">
-          <div className="flex items-center gap-2 text-neutral-500 dark:text-neutral-400 uppercase tracking-widest text-[11px]">
-            <Clock className="w-3.5 h-3.5 text-[#1E3A2F] dark:text-[#44725E]" />
+          <div className="flex items-center gap-2 text-neutral-500 uppercase tracking-widest text-[11px]">
+            <Clock className="w-3.5 h-3.5 text-[#1E3A2F]" />
             <span>Bengaluru Local Time</span>
           </div>
-          <div className="text-sm md:text-base font-medium text-neutral-900 dark:text-neutral-100 tabular-nums">
+          <div className="text-sm md:text-base font-medium text-neutral-900 tabular-nums">
             {timeIST ? `${timeIST} IST` : "Loading IST..."}
           </div>
           <p className="text-[11px] text-neutral-500">
@@ -41,10 +41,10 @@ export function Footer() {
 
         {/* Center: Monogram & Philosophy */}
         <div className="text-left md:text-center space-y-1">
-          <div className="font-display text-xl text-neutral-900 dark:text-neutral-100 font-normal">
+          <div className="font-display text-xl text-neutral-900 font-normal">
             D Mabusubhani
           </div>
-          <p className="text-[11px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider">
+          <p className="text-[11px] text-neutral-500 uppercase tracking-wider">
             Software Engineer · AI/ML Builder · Class of 2029
           </p>
         </div>
@@ -53,7 +53,7 @@ export function Footer() {
         <div>
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2.5 px-4 py-2 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-neutral-100 transition-colors uppercase tracking-wider text-[11px]"
+            className="group flex items-center gap-2.5 px-4 py-2 rounded-full border border-neutral-300 hover:border-neutral-900 transition-colors uppercase tracking-wider text-[11px]"
             data-cursor-label="Top"
           >
             <span>Back to top</span>
@@ -63,7 +63,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar: Copyright & Colophon */}
-      <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-neutral-500 dark:text-neutral-400 text-[11px]">
+      <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-neutral-500 text-[11px]">
         <div>
           © {new Date().getFullYear()} D Mabusubhani. All rights reserved.
         </div>
@@ -72,7 +72,7 @@ export function Footer() {
             href="https://github.com/Mabusubhani07"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="hover:text-neutral-900 transition-colors"
           >
             GitHub
           </a>
@@ -80,7 +80,7 @@ export function Footer() {
             href="https://www.linkedin.com/in/d-mabusubhani-25a815371"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="hover:text-neutral-900 transition-colors"
           >
             LinkedIn
           </a>
@@ -88,7 +88,7 @@ export function Footer() {
             href="https://leetcode.com/u/DMabusubhani/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="hover:text-neutral-900 transition-colors"
           >
             LeetCode
           </a>
@@ -96,14 +96,14 @@ export function Footer() {
             href="https://medium.com/@01.mabhusubhani"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="hover:text-neutral-900 transition-colors"
           >
             Medium
           </a>
           <a
             href="/assets/resume.pdf"
             download
-            className="hover:text-neutral-900 dark:hover:text-white transition-colors"
+            className="hover:text-neutral-900 transition-colors"
           >
             Resume
           </a>

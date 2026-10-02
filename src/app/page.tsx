@@ -7,7 +7,6 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Hackathons } from "@/components/Hackathons";
 import { Skills } from "@/components/Skills";
-import { Writing } from "@/components/Writing";
 import { Community } from "@/components/Community";
 import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
@@ -25,9 +24,8 @@ export default function Home() {
         <About />
         <Hackathons />
         <Skills />
-        <Writing />
-        <Community />
         <Education />
+        <Community />
         <Contact />
       </main>
       <Footer />

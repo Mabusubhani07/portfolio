@@ -111,10 +111,10 @@ export function CustomCursor() {
       <div
         className={`flex items-center justify-center rounded-full transition-all duration-300 ease-out ${
           cursorText
-            ? "w-20 h-20 bg-[#1E3A2F] text-[#F4F1EA] dark:bg-[#EAE7E0] dark:text-[#121314] shadow-xl text-[10px] tracking-widest uppercase font-medium"
+            ? "w-20 h-20 bg-[#1E3A2F] text-[#F4F1EA] shadow-xl text-[10px] tracking-widest uppercase font-medium"
             : isHovered
-            ? "w-10 h-10 bg-transparent border border-current text-[#141414] dark:text-[#EAE7E0] scale-110"
-            : "w-2.5 h-2.5 bg-[#141414] dark:bg-[#EAE7E0]"
+            ? "w-10 h-10 bg-transparent border border-current text-[#141414] scale-110"
+            : "w-2.5 h-2.5 bg-[#141414]"
         }`}
       >
         {cursorText && (

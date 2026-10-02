@@ -91,32 +91,32 @@ export function Hackathons() {
     >
       {/* Section Tag */}
       <div className="flex items-center justify-between pb-8 hairline-b">
-        <span className="mono-tag text-neutral-500 dark:text-neutral-400">
+        <span className="mono-tag text-neutral-500">
           02 / Hackathons & Recognition
         </span>
-        <span className="mono-tag text-neutral-400 dark:text-neutral-600">
+        <span className="mono-tag text-neutral-400">
           Competitive Builds
         </span>
       </div>
 
       <div className="pt-12 pb-14 space-y-4 max-w-3xl">
-        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 dark:text-[#EAE7E0] font-normal leading-[1.05]">
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-neutral-950 font-normal leading-[1.05]">
           Testing engineering under constraint.
         </h2>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+        <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
           Competitive builds provide an uncompromising proving ground. Selected national hackathon milestones and institutional showcases.
         </p>
       </div>
 
       {/* Numbered List with Hairline Dividers */}
-      <div className="divide-y divide-neutral-200 dark:divide-neutral-800 hairline-t hairline-b">
+      <div className="divide-y divide-neutral-200 hairline-t hairline-b">
         {hackathons.map((item) => {
           const isOpen = activeId === item.id;
 
           return (
             <div
               key={item.id}
-              className="hackathon-row group cursor-pointer transition-colors duration-300 hover:bg-neutral-100/50 dark:hover:bg-neutral-900/30 py-8 px-2 md:px-6"
+              className="hackathon-row group cursor-pointer transition-colors duration-300 hover:bg-neutral-100/50 py-8 px-2 md:px-6"
               onMouseEnter={() => setActiveId(item.id)}
               onClick={() => setActiveId(isOpen ? null : item.id)}
               data-cursor-label={item.number}
@@ -124,14 +124,14 @@ export function Hackathons() {
               <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4">
                 {/* Number & Name */}
                 <div className="flex items-baseline gap-6 md:gap-10">
-                  <span className="font-mono text-sm md:text-base text-neutral-400 dark:text-neutral-600 font-medium">
+                  <span className="font-mono text-sm md:text-base text-neutral-400 font-medium">
                     {item.number}
                   </span>
                   <div>
-                    <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-neutral-950 dark:text-neutral-100 font-normal transition-transform duration-300 group-hover:translate-x-2">
+                    <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-neutral-950 font-normal transition-transform duration-300 group-hover:translate-x-2">
                       {item.name}
                     </h3>
-                    <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mt-1">
+                    <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mt-1">
                       {item.organizer}
                     </p>
                   </div>
@@ -139,12 +139,12 @@ export function Hackathons() {
 
                 {/* Right: Status Pill & Arrow */}
                 <div className="flex items-center gap-4 pl-12 md:pl-0">
-                  <span className="text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-neutral-200/60 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700">
+                  <span className="text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-neutral-200/60 text-neutral-800 border border-neutral-300">
                     {item.status}
                   </span>
                   <span
                     className={`transform transition-transform duration-300 text-neutral-400 ${
-                      isOpen ? "rotate-90 text-neutral-900 dark:text-white" : ""
+                      isOpen ? "rotate-90 text-neutral-900" : ""
                     }`}
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -161,18 +161,18 @@ export function Hackathons() {
                 }`}
               >
                 <div className="min-h-0 pl-12 md:pl-16 space-y-4">
-                  <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 max-w-3xl leading-relaxed">
+                  <p className="text-sm md:text-base text-neutral-700 max-w-3xl leading-relaxed">
                     {item.description}
                   </p>
 
                   <div className="flex flex-wrap items-center gap-2 pt-2">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mr-2">
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-400 mr-2">
                       Focus Areas:
                     </span>
                     {item.focus.map((f) => (
                       <span
                         key={f}
-                        className="text-[11px] font-mono uppercase px-2.5 py-1 rounded bg-neutral-200/50 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-300"
+                        className="text-[11px] font-mono uppercase px-2.5 py-1 rounded bg-neutral-200/50 text-neutral-700"
                       >
                         {f}
                       </span>

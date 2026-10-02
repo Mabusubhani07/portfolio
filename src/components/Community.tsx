@@ -63,19 +63,19 @@ export function Community() {
     >
       {/* Section Header */}
       <div className="flex items-center justify-between pb-8 hairline-b">
-        <span className="mono-tag text-neutral-500 dark:text-neutral-400">
+        <span className="mono-tag text-neutral-500">
           05 / Community & Social Engagement
         </span>
-        <span className="mono-tag text-neutral-400 dark:text-neutral-600">
+        <span className="mono-tag text-neutral-400">
           Civic Contribution
         </span>
       </div>
 
       <div className="pt-10 pb-12 space-y-3 max-w-2xl">
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-950 dark:text-[#EAE7E0] font-normal">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-neutral-950 font-normal">
           Beyond the terminal.
         </h2>
-        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+        <p className="text-sm sm:text-base text-neutral-600 leading-relaxed font-normal">
           A commitment to social responsibility, community wellness, and sharing knowledge with honesty and humility.
         </p>
       </div>
@@ -85,11 +85,11 @@ export function Community() {
         {communityRoles.map((item, idx) => (
           <div
             key={idx}
-            className="community-card p-6 rounded-sm border border-neutral-200 dark:border-neutral-800 bg-neutral-100/40 dark:bg-neutral-900/30 flex flex-col justify-between space-y-6"
+            className="community-card p-6 rounded-sm border border-neutral-200 bg-neutral-100/50 flex flex-col justify-between space-y-6"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[#1E3A2F] dark:text-[#44725E] font-medium">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#1E3A2F] font-medium">
                   {item.role}
                 </span>
                 <span className="text-[10px] font-mono text-neutral-400">
@@ -97,15 +97,15 @@ export function Community() {
                 </span>
               </div>
 
-              <h3 className="font-display text-2xl text-neutral-950 dark:text-neutral-100 font-normal leading-snug">
+              <h3 className="font-display text-2xl text-neutral-950 font-normal leading-snug">
                 {item.organization}
               </h3>
 
-              <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+              <p className="text-xs font-mono uppercase tracking-wider text-neutral-500">
                 {item.focus}
               </p>
 
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed pt-2">
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed pt-2">
                 {item.description}
               </p>
             </div>

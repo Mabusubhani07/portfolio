@@ -2,11 +2,9 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { useTheme } from "./ThemeProvider";
-import { Sun, Moon, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,9 +47,8 @@ export function Navbar() {
     { label: "About", href: "/#about", num: "01" },
     { label: "Hackathons", href: "/#hackathons", num: "02" },
     { label: "Skills", href: "/#skills", num: "03" },
-    { label: "Writing", href: "/#writing", num: "04" },
-    { label: "Education", href: "/#education", num: "05" },
-    { label: "Contact", href: "/#contact", num: "06" },
+    { label: "Education", href: "/#education", num: "04" },
+    { label: "Contact", href: "/#contact", num: "05" },
   ];
 
   return (
@@ -61,7 +58,7 @@ export function Navbar() {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${
           isScrolled
-            ? "py-3 bg-[#F4F1EA]/85 dark:bg-[#121314]/85 backdrop-blur-md hairline-b"
+            ? "py-3 bg-[#F4F1EA]/85 backdrop-blur-md hairline-b"
             : "py-6 bg-transparent"
         }`}
       >
@@ -76,19 +73,19 @@ export function Navbar() {
             <span className="font-display text-2xl tracking-tight font-normal group-hover:italic transition-all">
               D Mabusubhani
             </span>
-            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-[#1E3A2F] dark:bg-[#44725E] opacity-70" />
-            <span className="hidden lg:inline-block text-[11px] font-mono tracking-widest uppercase text-neutral-500 dark:text-neutral-400">
+            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-[#1E3A2F] opacity-70" />
+            <span className="hidden lg:inline-block text-[11px] font-mono tracking-widest uppercase text-neutral-500">
               Bengaluru, IN
             </span>
           </Link>
 
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center space-x-7 text-xs font-mono tracking-wider uppercase">
-            {navLinks.slice(0, 5).map((link) => (
+            {navLinks.slice(0, 4).map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 link-draw transition-colors"
+                className="text-neutral-600 hover:text-neutral-900 link-draw transition-colors"
                 data-cursor-label={link.num}
               >
                 {link.label}
@@ -96,7 +93,7 @@ export function Navbar() {
             ))}
             <a
               href="/#contact"
-              className="px-3.5 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-900 dark:hover:border-neutral-100 text-neutral-800 dark:text-neutral-200 transition-all"
+              className="px-3.5 py-1.5 rounded-full border border-neutral-300 hover:border-neutral-900 text-neutral-800 transition-all"
               data-cursor="open"
               data-cursor-label="Hello"
             >
@@ -104,25 +101,12 @@ export function Navbar() {
             </a>
           </nav>
 
-          {/* Right Controls: Theme Toggle & Menu trigger */}
+          {/* Right Controls: Menu trigger */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme mode"
-              className="w-9 h-9 rounded-full flex items-center justify-center border border-neutral-300 dark:border-neutral-800 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors"
-              data-cursor-label={theme === "light" ? "Dark" : "Light"}
-            >
-              {theme === "light" ? (
-                <Moon className="w-4 h-4 text-neutral-700" />
-              ) : (
-                <Sun className="w-4 h-4 text-neutral-300" />
-              )}
-            </button>
-
             {/* Mobile / Full Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-800 text-xs font-mono uppercase"
+              className="md:hidden flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-300 text-xs font-mono uppercase"
               aria-label="Open Navigation Menu"
             >
               <Menu className="w-4 h-4" />
