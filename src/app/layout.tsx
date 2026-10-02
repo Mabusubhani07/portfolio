@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/profile.jpg",
+        url: "/assets/d-mabusubhani-white.jpg",
         width: 800,
         height: 1000,
         alt: "D Mabusubhani — Software Engineer & AI/ML Builder",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "D Mabusubhani · Software Engineer · AI/ML Builder",
     description:
       "Undergraduate engineer at MAHE building deterministic systems and applied machine learning solutions.",
-    images: ["/assets/profile.jpg"],
+    images: ["/assets/d-mabusubhani-white.jpg"],
   },
 };
 
