@@ -99,12 +99,12 @@ export function Hero() {
           {/* Action Row */}
           <div className="hero-fade flex flex-wrap items-center gap-4 mt-10 sm:mt-12 pt-8 hairline-t">
             <a
-              href="#work"
+              href="#about"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#141414] text-[#F4F1EA] dark:bg-[#EAE7E0] dark:text-[#121314] text-xs font-mono tracking-wider uppercase transition-transform hover:-translate-y-0.5"
               data-cursor="view"
-              data-cursor-label="DIEMP"
+              data-cursor-label="About"
             >
-              <span>Explore Flagship Work</span>
+              <span>Read Overview</span>
               <span className="text-xs">↓</span>
             </a>
 

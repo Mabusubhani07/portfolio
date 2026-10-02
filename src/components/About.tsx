@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Download, Award, ShieldCheck, GraduationCap } from "lucide-react";
@@ -133,10 +134,12 @@ export function About() {
                 01
               </div>
               <div className="text-[11px] font-mono tracking-wider uppercase text-neutral-500 dark:text-neutral-400">
-                Flagship Platform
+                Flagship Project
               </div>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 pt-1">
-                DIEMP: Digital Investigation & Evidence Platform
+                <Link href="/project/diemp" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+                  DIEMP: Digital Investigation & Evidence Platform ↗
+                </Link>
               </p>
             </div>
           </div>

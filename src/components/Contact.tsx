@@ -87,7 +87,7 @@ export function Contact() {
       {/* Section Header */}
       <div className="flex items-center justify-between pb-8 hairline-b">
         <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          08 / Initiate Contact
+          07 / Initiate Contact
         </span>
         <span className="mono-tag text-neutral-400 dark:text-neutral-600">
           Collaboration & Inquiries

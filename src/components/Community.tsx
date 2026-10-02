@@ -64,7 +64,7 @@ export function Community() {
       {/* Section Header */}
       <div className="flex items-center justify-between pb-8 hairline-b">
         <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          06 / Community & Social Engagement
+          05 / Community & Social Engagement
         </span>
         <span className="mono-tag text-neutral-400 dark:text-neutral-600">
           Civic Contribution

@@ -47,12 +47,11 @@ export function Navbar() {
 
   const navLinks = [
     { label: "About", href: "/#about", num: "01" },
-    { label: "Selected Work", href: "/#work", num: "02" },
-    { label: "Hackathons", href: "/#hackathons", num: "03" },
-    { label: "Skills", href: "/#skills", num: "04" },
-    { label: "Writing", href: "/#writing", num: "05" },
-    { label: "Education", href: "/#education", num: "06" },
-    { label: "Contact", href: "/#contact", num: "07" },
+    { label: "Hackathons", href: "/#hackathons", num: "02" },
+    { label: "Skills", href: "/#skills", num: "03" },
+    { label: "Writing", href: "/#writing", num: "04" },
+    { label: "Education", href: "/#education", num: "05" },
+    { label: "Contact", href: "/#contact", num: "06" },
   ];
 
   return (

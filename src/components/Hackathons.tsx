@@ -92,7 +92,7 @@ export function Hackathons() {
       {/* Section Tag */}
       <div className="flex items-center justify-between pb-8 hairline-b">
         <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          03 / Hackathons & Recognition
+          02 / Hackathons & Recognition
         </span>
         <span className="mono-tag text-neutral-400 dark:text-neutral-600">
           Competitive Builds

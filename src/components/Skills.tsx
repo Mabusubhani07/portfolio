@@ -104,7 +104,7 @@ export function Skills() {
       {/* Section Header */}
       <div className="px-6 md:px-12 flex items-center justify-between pb-8 hairline-b">
         <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          04 / Skills & Capabilities
+          03 / Skills & Capabilities
         </span>
         <span className="mono-tag text-neutral-400 dark:text-neutral-600">
           Core Tooling & Knowledge

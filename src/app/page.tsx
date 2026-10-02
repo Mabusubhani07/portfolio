@@ -5,7 +5,6 @@ import { Preloader } from "@/components/Preloader";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { SelectedWork } from "@/components/SelectedWork";
 import { Hackathons } from "@/components/Hackathons";
 import { Skills } from "@/components/Skills";
 import { Writing } from "@/components/Writing";
@@ -24,7 +23,6 @@ export default function Home() {
       <main className="relative flex-1">
         <Hero />
         <About />
-        <SelectedWork />
         <Hackathons />
         <Skills />
         <Writing />

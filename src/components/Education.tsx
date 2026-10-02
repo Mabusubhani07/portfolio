@@ -120,7 +120,7 @@ export function Education() {
       {/* Section Header */}
       <div className="flex items-center justify-between pb-8 hairline-b">
         <span className="mono-tag text-neutral-500 dark:text-neutral-400">
-          07 / Education & Academics
+          06 / Education & Academics
         </span>
         <span className="mono-tag text-neutral-400 dark:text-neutral-600">
           Institutional Path
