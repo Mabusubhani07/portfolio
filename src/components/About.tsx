@@ -52,9 +52,9 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-12 items-start">
         {/* Left Column: Framed Photo & Quick Identifiers */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="about-animate relative aspect-[3/4] sm:aspect-[4/5] rounded-sm overflow-hidden border border-neutral-300 bg-[#F4F1EA] shadow-sm group">
+          <div className="about-animate relative aspect-[3/4] sm:aspect-[4/5] rounded-sm overflow-hidden border border-neutral-300 bg-[#141414] shadow-sm group">
             <Image
-              src="/assets/d-mabusubhani-web.png"
+              src="/assets/profile.jpg"
               alt="D Mabusubhani"
               fill
               priority
