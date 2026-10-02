@@ -146,12 +146,9 @@ export function Skills() {
               idx % 2 === 1 ? "md:mt-4" : ""
             }`}
           >
-            <div className="flex items-center justify-between pb-4 hairline-b">
+            <div className="pb-4 hairline-b">
               <span className="font-mono text-xs text-neutral-400">
                 {group.number}
-              </span>
-              <span className="mono-tag text-[#1E3A2F]">
-                Discipline
               </span>
             </div>
 
